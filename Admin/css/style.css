@@ -1,0 +1,194 @@
+/*code for navigation bar starts here*/
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.my_nav{
+    position: relative;
+    width: 100%;
+    z-index: 999;
+    background: none;
+    border: none;
+    border-radius: 0;
+}
+
+.my_nav{
+    background-color: rgba(0,0,0,0.00);
+    border-color: rgba(0,0,0,0.00);
+}
+
+.my_nav .navbar-brand{
+    color: #ecf0f1;
+
+}
+.my_nav .navbar-brand:hover, .my_nav .navbar-brand:focus{
+    color: aliceblue;
+}
+
+.my_nav .navbar-text{
+    color: #ecf0f1;
+}
+
+.my_nav .navbar-nav >li>a{
+    color: #ecf0f1;
+}
+
+.my_nav .navbar-nav >li>a:hover,
+.my_nav .navbar-nav >li>a:focus{
+    color: #ecf0f1;
+
+}
+
+.my_nav .navbar-nav >.active>a,
+.my_nav .navbar-nav >.active>a:hover,.my_nav .navbar-nav >.active:focus{
+    background-color: #3962ff;
+    color: #ecf0f1;
+}
+
+.my_nav .navbar-nav > .open>a,
+.my_nav .navbar-nav > .open>a:hover,.my_nav .navbar-nav >.open:focus{
+    background-color: #3962ff;
+    color: #ecf0f1;
+}
+
+.my_nav .navbar-toggle {
+    border-color: #3962ff;
+}
+.my_nav .navbar-toggle:hover,
+.my_nav .navbar-toggle:focus {
+    background-color: #3962ff;
+}
+.my_nav .navbar-toggle .icon-bar {
+    background-color: #ecf0f1;
+}
+.my_nav .navbar-collapse,
+.my_nav .navbar-form {
+    border-color: #ecf0f1;
+}
+.my_nav .navbar-link {
+    color: #ecf0f1;
+}
+.my_nav .navbar-link:hover {
+    color: #ecdbff;
+}
+
+@media (max-width: 767px) {
+    .my_nav .navbar-nav .open .dropdown-menu > li > a {
+        color: #ecf0f1;
+    }
+    .my_nav .navbar-nav .open .dropdown-menu > li > a:hover,
+    .my_nav .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #ecdbff;
+    }
+    .my_nav .navbar-nav .open .dropdown-menu > .active > a,
+    .my_nav .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .my_nav .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #ecdbff;
+        background-color: #3962ff;
+    }
+}
+
+/*code for navigation bar starts here*/
+
+
+
+.my-carousel {top: -70px;}
+
+
+/*view user profile  code starts here*/
+
+.profile{
+    margin: 20px 0;
+}
+
+.profile-sidebar{
+    padding: 20px 0 10px 0;
+    background: #fff;
+}
+
+.profile-user-pic{
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+
+
+}
+
+.profile-user-title{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-user-name{
+    color: #5a73a1;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.profile-user-job{
+    text-transform: uppercase;
+    color: #5babd1;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-user-buttons{
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.mybtn{
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 15px;
+    margin-right: 5px;
+}
+
+.mybtn:last-child{
+    margin-right: 0;
+}
+
+.profile-user-menu{
+    margin-top: 30px;
+}
+
+.profile-user-menu ul li{
+    color: #93a3b5;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.profile-user-menu ul li i{
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.profile-user-menu ul li i:hover{
+    background-color: #fafcfd;
+    color: #5babd1;
+}
+
+li.active a{
+    color: #5babd1;
+    background-color: #f6fafb;
+    border-left: 2px solid #5babd1;
+    margin-left: -3px;
+
+
+}
+
+.profile-content{
+    padding: 20px;
+    background: #fff;
+    min-height: 460px;
+}
+
+/*view user profile  code ends here*/

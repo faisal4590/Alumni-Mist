@@ -1,0 +1,104 @@
+@font-face{
+    font-family:LobsterTwo-Regular;
+    src: url(../fonts/LobsterTwo-Regular.ttf) format('truetype');
+}
+@font-face{
+    font-family:OpenSans-Regular;
+    src: url(../fonts/OpenSans-Regular.ttf) format('truetype');
+}
+@font-face{
+    font-family:LobsterTwo-Italic;
+    src: url(../fonts/LobsterTwo-Italic.ttf) format('truetype');
+}
+.gallery-title
+{
+    font-size: 36px;
+    color: #42B32F;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+}
+.filter-button
+{
+
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #42B32F;
+    margin-bottom: 30px;
+    height:40px;
+
+}
+
+.filter-button span{
+    font-size: 18px;
+    font-family: LobsterTwo-Regular, OpenSans-Regular, Sans-serif;
+}
+/*.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #42B32F;
+
+}*/
+.btn-default:active .filter-button:active
+{
+    background-color: #42B32F;
+    color: white;
+}
+
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 30px;
+}
+
+.thumbnail {
+    position: relative;
+}
+
+.caption{
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+}
+.myStyle{
+    width:150px;
+    opacity:.5;
+    transition: 2s;
+}
+.myStyle:hover{
+    opacity:1;
+    transition: 2s;
+}
+.myStyle span{
+    color:white;
+    font-size: 18px;
+
+}
+
+.wholeImageContainer{
+    box-shadow: 0px 0px 20px #AA66CC, 0px 0px 40px rgba(256, 256, 256, 1);
+}
+
+.myImageStyle:hover{
+    opacity:.8;
+    transition: 3s;
+
+}

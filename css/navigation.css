@@ -1,0 +1,18 @@
+/* Navigation*/
+.navbar {
+    background-color: transparent;
+}
+.scrolling-navbar {
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+.top-nav-collapse {
+    background-color: #667490;
+}
+footer.page-footer {
+    background-color: #667490;
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #667490;
+    }
+}
