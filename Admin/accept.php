@@ -1,26 +1,35 @@
 <?php
+
+/*ini_set('display_errors', 1);
+error_reporting(E_ALL);*/
+
+
 include('../functions/functions.php');
 require '../PHPMailer-master/PHPMailerAutoload.php';
-$id = $_GET['id'];
-$query = "select * from alumni.requests where alumni.requests.id = '$id'; ";
 
-if(count(fetchAll($query)) > 0){
-    foreach(fetchAll($query) as $row){
-        $username= $row['username'];
-        $fullname = $row['fullname'];
-        $email = $row['email'];
-        $password = $row['password'];
-        $userImage = $row['image'];
+
+$id    =  $_GET['id'];
+$query = "select * from alumni.requests where alumni.requests.id=$id;";
+
+if (count(fetchAll($query)) > 0)
+{
+    foreach (fetchAll($query) as $row)
+    {
+        $username   = $row['username'];
+        $fullname   = $row['fullname'];
+        $email      = $row['email'];
+        $password   = $row['password'];
+        $userImage  = $row['image'];
         $department = $row['department'];
-        $batch = $row['batch_no'];
-        $roll = $row['roll'];
-        $regNo = $row['registration_no'];
+        $batch      = $row['batch_no'];
+        $roll       = $row['roll'];
+        $regNo      = $row['registration_no'];
 
-/*        $_SESSION['email']      = $email;
-        $_SESSION['picture']    = $userImage;
-        $_SESSION['familyName'] = $username;
-        $_SESSION['status']     = true;
-        $_SESSION['fullName'] = $fullname;*/
+        /*        $_SESSION['email']      = $email;
+                $_SESSION['picture']    = $userImage;
+                $_SESSION['familyName'] = $username;
+                $_SESSION['status']     = true;
+                $_SESSION['fullName'] = $fullname;*/
 
         $token = 'qwertzuiopasdfghjklyxcvbnmQWERTZUIOPASDFGHJKLYXCVBNM0123456789!$/()*';
         $token = str_shuffle($token);
@@ -31,11 +40,15 @@ if(count(fetchAll($query)) > 0){
         /*$query = "INSERT INTO alumni.users (u_fnm,u_email,u_pwd,isEmailConfirmed,tokenUser)
 					VALUES ('$name', '$email', '$hashedPassword', '0', '$token')";*/
 
-        $query = "INSERT INTO alumni.users (u_id,u_unm,u_fnm,u_email,u_pwd,u_img,isEmailConfirmed,tokenUser,department,batch_no,roll,registration_no) 
-			VALUES ('$id', '$username', '$fullname', '$email', '$password', '$userImage','0','$token','$department','$batch','$roll','$regNo');";
+        $conn = new mysqli("localhost","root", "","alumni") or die('cant connect to db');
+
+        $query = "INSERT INTO alumni.users (u_id,u_unm,u_fnm,u_email,u_pwd,u_img,department,batch_no,roll,registration_no)
+			VALUES ('$id', '$username', '$fullname', '$email', '$password', '$userImage','$department','$batch','$roll','$regNo');";
     }
-    $query .= "DELETE FROM alumni.requests WHERE requests.id = '$id';";
-    if(performQuery($query)){
+    $query .= "DELETE FROM alumni.requests WHERE id=$id";
+
+    if (mysqli_multi_query($conn,$query) or trigger_error(mysqli_error($conn)." ".$query) )
+    {
         echo "<script>alert('Account has been accepted.')</script>";
         $message = 'Your account has been accepted';
 
@@ -67,12 +80,12 @@ if(count(fetchAll($query)) > 0){
         $mail->From     = "optimizedfaisal42@gmail.com";
         $mail->FromName = "Faisal";
 
-        $mail->addAddress($email,$username);
+        $mail->addAddress($email, $username);
 
         $mail->isHTML(true);
 
         $mail->Subject = "Please verify your email!";
-        $mail->Body = "
+        $mail->Body    = "
                     Please click on the link below:<br><br>
                     
                     <a href='http://localhost/alumni/confirmEmail.php?email=$email&token=$token'>Click Here</a>
@@ -82,7 +95,8 @@ if(count(fetchAll($query)) > 0){
         {
             echo "Mailer Error: " . $mail->ErrorInfo;
         }
-        else{
+        else
+        {
             $msg = "You have been registered! Please verify your email!";
         }
 
@@ -91,11 +105,15 @@ if(count(fetchAll($query)) > 0){
         performQuery($query);
         $_SESSION['accept_user_id'] = $id;
 
-    }else{
+    }
+    else
+    {
         echo "<script>alert('Unknown error occurred. Please try again.')</script>";
 
     }
-}else{
+}
+else
+{
     echo "Error occured.";
 }
 

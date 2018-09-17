@@ -87,7 +87,7 @@ session_start();
 
 
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a href="manageUser.php">Manage User
+                    <li><a href="adminNew/manageUser.php">Manage User
                             <span class="badge badge-primary"><?php echo $row_cnt; ?></span>
                             <span class="sr-only">unread messages</span>
                         </a></li>
@@ -104,7 +104,7 @@ session_start();
                 ?>
 
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a href="manageTicket.php">Manage ticket request
+                    <li><a href="adminNew/manageTicket.php">Manage ticket request
                             <span class="badge badge-primary"><?php echo $row_cnt; ?></span>
                             <span class="sr-only">unread messages</span>
                         </a></li>

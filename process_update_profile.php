@@ -6,7 +6,7 @@
  * Time: 11:29 PM
  */
 session_start();
-ini_set('display_errors',1);
+ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 
@@ -50,10 +50,10 @@ if (!empty($_POST))
             $updateCity                 = htmlspecialchars($_POST['updateCity']);
             $updateCurrentWorkingPlace  = htmlspecialchars($_POST['updateWorkingInfo']);
             $updateAddress              = htmlspecialchars($_POST['updateAddress']);
-            $updateRoll              = htmlspecialchars($_POST['updateRoll']);
-            $updateRegistrationNo             = htmlspecialchars($_POST['updateReg']);
+            $updateRoll                 = htmlspecialchars($_POST['updateRoll']);
+            $updateRegistrationNo       = htmlspecialchars($_POST['updateReg']);
             $updateDepartment           = htmlspecialchars($_POST['updateDepartment']);
-            $updateBatch           = htmlspecialchars($_POST['updateBatch']);
+            $updateBatch                = htmlspecialchars($_POST['updateBatch']);
             $updateStudentStatus        = htmlspecialchars($_POST['updateStudentStatus']);
             $updateResearchLink         = htmlspecialchars($_POST['updateResearchLink']);
             $updateIncmUni              = htmlspecialchars($_POST['updateIncomingUniversityName']);
@@ -81,16 +81,13 @@ if (!empty($_POST))
 
             $updateUserImageName = $_FILES['deleteImage']['name'];
 
-            var_dump($previousImageName,$updateUserImageName);
+            var_dump($previousImageName, $updateUserImageName);
 
             move_uploaded_file($_FILES['deleteImage']['tmp_name'], 'images/userImages/'
-                .$_FILES['deleteImage']['name']);
-
-
+                . $_FILES['deleteImage']['name']);
 
 
             $usd = $_SESSION['uid'];
-
 
 
             $sql = "UPDATE alumni.users SET users.u_pwd='$updatepwd', users.twitter='$updateTwitter',
@@ -147,11 +144,11 @@ if (!empty($_POST))
             $updateDesignation          = htmlspecialchars($_POST['updateDesignation']);
             $updateCity                 = htmlspecialchars($_POST['updateCity']);
             $updateCurrentWorkingPlace  = htmlspecialchars($_POST['updateWorkingInfo']);
-            $updateRoll              = htmlspecialchars($_POST['updateRoll']);
-            $updateRegistrationNo             = htmlspecialchars($_POST['updateReg']);
+            $updateRoll                 = htmlspecialchars($_POST['updateRoll']);
+            $updateRegistrationNo       = htmlspecialchars($_POST['updateReg']);
             $updateAddress              = htmlspecialchars($_POST['updateAddress']);
             $updateDepartment           = $_POST['updateDepartment'];
-            $updateBatch           =           $_POST['updateBatch'];
+            $updateBatch                = $_POST['updateBatch'];
             $updateStudentStatus        = htmlspecialchars($_POST['updateStudentStatus']);
             $updateResearchLink         = htmlspecialchars($_POST['updateResearchLink']);
             $updateIncmUni              = htmlspecialchars($_POST['updateIncomingUniversityName']);
@@ -177,10 +174,7 @@ if (!empty($_POST))
             }
 
 
-
-
             $usd = $_SESSION['uid'];
-
 
 
             $sql = "UPDATE alumni.users SET users.u_pwd='$updatepwd', users.twitter='$updateTwitter',
@@ -201,7 +195,7 @@ if (!empty($_POST))
              users.u_img='$previousImageName'
             WHERE u_id=$usd";
 
-            mysqli_query($db,$sql)  or trigger_error(mysqli_error($db)." ".$sql);;
+            mysqli_query($db, $sql) or trigger_error(mysqli_error($db) . " " . $sql);;
 
             $db->close();
 

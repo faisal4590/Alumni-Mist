@@ -94,7 +94,7 @@ include 'navbarNew2.php';
                 "scrollAnimWholeContent3");
 
             $query = "SELECT * FROM alumni.users WHERE users.department = '$department' AND batch_no = '$batchNo' 
-            AND student_status ='previous student' ";
+            AND student_status ='previous student' ORDER BY alumni.users.roll ASC ";
 
 
             $result = mysqli_query($connect, $query) or die('cant connect to query');
@@ -131,6 +131,11 @@ include 'navbarNew2.php';
                                     <div>
                                       <span class="fa fa-home" style=" vertical-align: middle;"></span>
                                       <span>' . $row['department'] . '\'' . $row['batch_no'] . '</span>
+                                   </div>
+                                   
+                                    <div>
+                                      <span class="fa fa-book" style=" vertical-align: middle;"></span>
+                                      <span>' . $row['roll'] . '</span>
                                    </div>
                                    
                                       <div>

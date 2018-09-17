@@ -55,7 +55,7 @@ if (!empty($_POST))
     }
     else
     {
-        move_uploaded_file($_FILES['upcomingEventImage']['tmp_name'], '../images/upcomingEventImages/'
+        move_uploaded_file($_FILES['upcomingEventImage']['tmp_name'], '../../images/upcomingEventImages/'
             . $_FILES['upcomingEventImage']['name']);
 
         $upEventImageName = $_FILES['upcomingEventImage']['name'];

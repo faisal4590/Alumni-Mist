@@ -86,9 +86,9 @@
                         <li><a href="viewUserProfile.php" target="_blank" style="font-family: LobsterTwo-Regular; font-size: 18px;">View profile</a></li>
                         <li><a href="newUpdate.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Update profile</a></li>
                         <li><a href="timeline.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Timeline</a></li>
-                        <!-- 
+                        
                         <li><a href="open_chat.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Chat</a></li>
-                        <li><a href="viewAllUsers.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">View all users</a></li>-->
+                        <li><a href="viewAllUsers.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">View all users</a></li>
                         <li><a href="logout.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Logout</a></li>
                       
                     </ul>
@@ -109,9 +109,9 @@
                         <li><a href="viewUserProfile.php" target="_blank" style="font-family: LobsterTwo-Regular; font-size: 18px;">View profile</a></li>
                         <li><a href="newUpdate.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Update profile</a></li>
                         <li><a href="timeline.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Timeline</a></li>
-                        <!-- 
+                        
                         <li><a href="open_chat.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Chat</a></li>
-                        <li><a href="viewAllUsers.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">View all users</a></li>-->
+                        <li><a href="viewAllUsers.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">View all users</a></li>
                         <li><a href="logout.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Logout</a></li>
                       
                     </ul>
@@ -246,6 +246,20 @@
                         }
                         //code for ticket notification ends here
                         ?>
+
+                        <!--MIST linkup-->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="https://mist.ac.bd/"><i class="pe-7s-study"></i><p style="font-family: LobsterTwo-Regular; font-size: 18px;">MIST</p></a>
+                            </li>
+                        </ul>
+
+                        <!--Committee-->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="committee.php"><i class="pe-7s-study"></i><p style="font-family: LobsterTwo-Regular; font-size: 18px;">Committee</p></a>
+                            </li>
+                        </ul>
 
 
                     </ul>

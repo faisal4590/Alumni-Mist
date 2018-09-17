@@ -1,5 +1,6 @@
 <?php
 //load_data.php
+
 $connect = mysqli_connect("localhost", "root", "", "alumni");
 $output = '';
 if(isset($_POST["brand_id"]))
@@ -21,12 +22,13 @@ if(isset($_POST["brand_id"]))
         $event_time = $row['upcoming_event_time'];
         $event_duration = $row['upcoming_event_duration'];
         $event_description = $row['upcoming_event_description'];
+        $event_image = $row['upcoming_event_image'];
 
 
-        $output.=' <form method="post" action="processUpdateEvents.php" enctype="multipart/form-data">';
+        $output.=' <form method="post" action="processUpdateEvents.php?id='.$_POST["brand_id"].'" enctype="multipart/form-data">';
 
         $output .= ' 
-            <div class="h1 alert-info text-center">
+            <div class="h1 text-center">
                 Update event title
             </div>
 
@@ -35,7 +37,7 @@ if(isset($_POST["brand_id"]))
                     <input type="text" name="updateUpcomingEventTitle" class="form-control" value="'.$event_title.'">
             </div> ';
 
-        $output .=' <div class="h1 alert-info text-center">
+        $output .=' <div class="h1 text-center">
                     Update event location
                 </div>
 
@@ -45,7 +47,7 @@ if(isset($_POST["brand_id"]))
                               value="'.$event_location.'">
                     </div>';
 
-        $output .='  <div class="h1 alert-info text-center">
+        $output .='  <div class="h1 text-center">
                         Update event time
                     </div>
 
@@ -55,7 +57,7 @@ if(isset($_POST["brand_id"]))
                         </div>
                     </div>';
 
-        $output .='  <div class="h1 alert-info text-center">
+        $output .='  <div class="h1  text-center">
                         Update event duration(in days)
                     </div>
 
@@ -65,21 +67,34 @@ if(isset($_POST["brand_id"]))
                         </div>
                     </div>';
 
-        $output .='  <div class="h1 alert-info text-center">
+        $output .='  <div class="h1  text-center">
                         Update event description
                     </div>
 
                     <div class="form-group">
                         <div>
-                            <textarea name="updateUpcomingEventDescription" class="form-control" >'.$event_duration.'</textarea>
+                            <textarea name="updateUpcomingEventDescription" class="form-control" >'.$event_description.'</textarea>
                         </div>
                     </div>';
 
+        $output .='  <div class="h1  text-center">
+                        Update event picture
+                    </div>
+
+                    <div class="form-group">
+                        <div>
+                            <img src="../../images/upcomingEventImages/'.$event_image.'"  alt="" height="200" width="500">
+                        </div>
+                        <br/>
+                        <input type="file" class="filestyle" name="deleteImage">
+                    </div>';
+
         $output .= '<div class="form-group">
-                        <input type="submit" class="form-control btn btn-success" value="Update" name="submitAddUpcomingEvents">
+                        <input type="submit" class="form-control btn btn-success" value="Update" name="submitUpdateUpcomingEvents">
                     </div>';
 
         $output .='</form>';
+
 
 
     }

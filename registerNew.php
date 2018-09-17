@@ -7,7 +7,12 @@
  */
 ?>
 
-<?php session_start(); ?>
+<?php
+session_start();
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+?>
 
 <?php
 /**
@@ -223,7 +228,7 @@ include 'navbarNew2.php';
                     . $_FILES['userImage']['name']);
 
 
-
+                //var_dump($_POST);
 
                 $query = "INSERT INTO alumni.requests (username,fullname,email,password,image,message,date,department,batch_no,roll,registration_no) 
 			    VALUES ('$unm','$fnm','$email','$pwd','$usrImage','$message',CURRENT_TIMESTAMP,'$department','$batch', '$roll','$regNo' )";

@@ -1,75 +1,59 @@
 <?php
-$msg = "";
-
-if (isset($_POST['submit']))
+//load_data_select.php
+$connect = mysqli_connect("localhost", "root", "", "alumni");
+function fill_brand($connect)
 {
-    $con = new mysqli('localhost', 'root', '', 'alumni');
-
-    $email    = $con->real_escape_string($_POST['email']);
-    $password = $con->real_escape_string($_POST['password']);
-
-    if ($email == "" || $password == "")
+    $output = '';
+    $sql = "SELECT * FROM alumni.upcoming_events";
+    $result = mysqli_query($connect, $sql);
+    while($row = mysqli_fetch_array($result))
     {
-        $msg = "Please check your inputs!";
+        $output .= '<option value="'.$row["upcoming_event_id"].'">'.$row["upcoming_event_title"].'</option>';
     }
-    else
-    {
-        $sql = $con->query("SELECT u_id, u_pwd, isEmailConfirmed FROM alumni.users WHERE u_email='$email'");
-        if ($sql->num_rows > 0)
-        {
-            $data = $sql->fetch_array();
-            if (password_verify($password, $data['u_pwd']))
-            {
+    return $output;
+}
+function fill_product($connect)
+{
 
-                if ($data['isEmailConfirmed'] == 0)
-                {
-                    $msg = "Please verify your email!";
-                }
-                else
-                {
-                    $msg = "You have been logged in";
-                }
-            }
-            else
-            {
-                $msg = "Please check your inputs!";
-            }
-        }
-        else
-        {
-            $msg = "Please check your inputs!";
-        }
-    }
 }
 ?>
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Log In</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
-          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <title>Webslesson Tutorial | Multiple Image Upload</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 <body>
-<div class="container" style="margin-top: 100px;">
-    <div class="row justify-content-center">
-        <div class="col-md-6 col-md-offset-3" align="center">
 
-            <img src="images/logo.png"><br><br>
-
-            <?php if ($msg != "") echo $msg . "<br><br>" ?>
-
-            <form method="post" action="test2.php">
-                <input class="form-control" name="email" type="email" placeholder="Email..."><br>
-                <input class="form-control" name="password" type="password" placeholder="Password..."><br>
-                <input class="btn btn-primary" type="submit" name="submit" value="Log In">
-            </form>
-
+<br /><br />
+<div class="container" style="margin: 0 auto; width: 600px;">
+    <h3>
+        <select name="brand" id="brand">
+            <option value="">Show All Product</option>
+            <?php echo fill_brand($connect); ?>
+        </select>
+        <br /><br />
+        <div class="row" id="show_product">
+            <?php echo fill_product($connect);?>
         </div>
-    </div>
+    </h3>
 </div>
 </body>
 </html>
+<script>
+    $(document).ready(function(){
+        $('#brand').change(function(){
+            var brand_id = $(this).val();
+            $.ajax({
+                url:"test3.php",
+                method:"POST",
+                data:{brand_id:brand_id},
+                success:function(data){
+                    $('#show_product').html(data);
+                }
+            });
+        });
+    });
+</script>
