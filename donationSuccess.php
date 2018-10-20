@@ -31,6 +31,10 @@ $payment_status = $_GET['st'];
     </style>
 </head>
 <body>
+<?php
+include "navbarNew2.php";
+?>
+
 <div class="container">
     <h2>Your donation has been completed. Here is your transaction info</h2>
     <table class="table">

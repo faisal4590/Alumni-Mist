@@ -130,7 +130,7 @@ html {
         width: 100%;
         font-family: "Cormorant", serif;
         font-weight: 400;
-        font-style: italic;
+
         font-size: calc(1.5vmin + 1.75vmax);
         margin-bottom: 5%;
     }
@@ -141,7 +141,5 @@ html {
         font-weight: 900;
         letter-spacing: 2px;
     }*/
-    a:hover, a:focus {
-        -webkit-text-stroke: 1px #999;
-    }
+
 }

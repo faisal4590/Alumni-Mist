@@ -134,6 +134,7 @@ include 'navbarNew2.php';
     {
         transition: .8s;
         border-bottom-color: red;
+        color: #000;
     }
 
     @media screen and (max-width: 750px)

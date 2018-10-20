@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 /**
  * Created by PhpStorm.
  * User: faisal
@@ -25,7 +28,9 @@
 </head>
 <body>
 
-
+<?php
+include "navbarNew2.php";
+?>
 <div class="form-group test">
     <h3 class="h3">Donate using paypal</h3>
     <form method="post" action="processDonation.php">

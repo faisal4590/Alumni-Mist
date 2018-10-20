@@ -65,7 +65,7 @@ if(!empty($_POST))
                 }
                 else
                 {
-                    header("location:admin/index.php");
+                    header("location:admin/adminNew/index.php");
                 }
             }
 

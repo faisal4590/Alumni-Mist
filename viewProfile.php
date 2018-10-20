@@ -206,8 +206,6 @@ $row = $res->fetch_array(MYSQLI_ASSOC);
 include 'footer.php';
 ?>
 
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.min.js"></script>
 
 </body>
 </html>

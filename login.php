@@ -56,7 +56,7 @@ include 'navbarNew2.php';
 
     body
     {
-        background-image: url(images/new_carousel_2.jpg);
+        background-image: url(images/newbg.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;

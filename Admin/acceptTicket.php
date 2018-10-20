@@ -289,7 +289,7 @@
             $query = "DELETE FROM alumni.validate_ticket WHERE validate_ticket.ticket_id = '$ticket_id'";
             performQuery($query);
 
-            echo '<button class="btn btn-info"> <a href="index.php">Home</a></button>';
+            echo '<button class="btn btn-info"> <a href="adminNew/index.php">Home</a></button>';
 
             //code for phpMailer ends here
 

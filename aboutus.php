@@ -5,6 +5,7 @@
  * Date: 4/28/2018
  * Time: 5:16 PM
  */
+session_start();
 ?>
 
 
@@ -94,8 +95,7 @@ include 'navbarNew2.php';
 
 </article>
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 <div>
     <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/74452/bcr-white.png'>
 </div>

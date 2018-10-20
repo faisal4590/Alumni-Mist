@@ -5,6 +5,7 @@
  * Date: 4/15/2018
  * Time: 1:24 AM
  */
+session_start();
 ?>
 
 <?php
@@ -31,7 +32,9 @@ $donationAmount = $_POST['donateMoney'];
     </style>
 </head>
 <body>
-
+<?php
+include "navbarNew2.php";
+?>
 
 <form method="post" action="<?php echo $paypal_url; ?>" class="test">
 

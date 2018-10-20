@@ -17,10 +17,10 @@ if (!empty($_POST))
     $msg = '';
 
 
-    if ($_POST['updatePassword'] != $_POST['confirmUpdatePassword'])
+    /*if ($_POST['updatePassword'] != $_POST['confirmUpdatePassword'])
     {
         $msg .= '<p>Your password did not match. Please Enter your Password Again.</p>';
-    }
+    }*/
 
 
     if (strlen($_POST['updatePassword']) > 30)

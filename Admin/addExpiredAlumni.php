@@ -83,6 +83,7 @@ include 'navbarAdmin.php';
                     <div class="form-group">
                         <div>
                             <input type="file" class="filestyle" name="expiredAlumniImage">
+                            <span class="alert-danger">*Max size 1MB</span>
                         </div>
                     </div>
 

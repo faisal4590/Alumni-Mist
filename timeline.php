@@ -145,7 +145,7 @@ include 'navbarNew2.php';
                                </p>
                                
                          
-                                <div class="fb-comments" data-href="http://localhost/alumni/timeline.php" data-numposts="5"></div>
+                                <!-- <div class="fb-comments" data-href="http://localhost/alumni/timeline.php" data-numposts="5"></div> -->
                         
                            
                        

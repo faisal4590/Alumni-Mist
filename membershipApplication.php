@@ -28,7 +28,7 @@
 
 
 
-<body>
+<body style="background: #a6cfff">
 
 
 <?php
@@ -44,14 +44,14 @@ include 'navbarNew2.php';
                 <hr class="colorgraph" style="margin-top: -10px;">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                        <label for="" style="color:#bfbdb3">First name: <span style="color: #ff564d;">*</span></label>
+                        <label for="" style="color:black">First name: <span style="color: #ff564d;">*</span></label>
                         <div class="form-group">
                             <input type="text" name="firstName" id="first_name"
                                    class="form-control" placeholder="First Name" tabindex="1" required>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                        <label for="" style="color:#bfbdb3">Last name: <span style="color: #ff564d;">*</span></label>
+                        <label for=""  style="color:black">Last name: <span style="color: #ff564d;">*</span></label>
                         <div class="form-group">
                             <input type="text" name="lastName" id="last_name" class="form-control"
                                    placeholder="Last Name" tabindex="2" required>
@@ -59,7 +59,7 @@ include 'navbarNew2.php';
                     </div>
                 </div>
 
-                <label for="" style="color:#bfbdb3">Email: <span style="color: #ff564d;">*</span></label>
+                <label for=""  style="color:black">Email: <span style="color: #ff564d;">*</span></label>
                 <div class="form-group">
                     <input type="email" name="email" id="display_name" class="form-control"
                            placeholder="Email" tabindex="3" required>
@@ -68,7 +68,7 @@ include 'navbarNew2.php';
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-4 col-md-4">
-                        <label for="" style="color:#bfbdb3">Date of Birth: <span
+                        <label for=""  style="color:black">Date of Birth: <span
                                 style="color: #ff564d;">*</span></label>
                         <div class="form-group">
                             <input type="date" name="dob" id="display_name" class="form-control"
@@ -77,7 +77,7 @@ include 'navbarNew2.php';
 
                     </div>
                     <div class="col-xs-12 col-sm-4 col-md-4">
-                        <label for="" style="color:#bfbdb3">Gender: <span style="color: #ff564d;">*</span></label>
+                        <label for=""  style="color:black">Gender: <span style="color: #ff564d;">*</span></label>
 
                         <div class="form-group">
                             <label class="radio-inline">
@@ -90,7 +90,7 @@ include 'navbarNew2.php';
                     </div>
 
                     <div class="col-xs-12 col-sm-4 col-md-4">
-                        <label for="" style="color:#bfbdb3">Blood group: <span style="color: #ff564d;"></span></label>
+                        <label for=""  style="color:black">Blood group: <span style="color: #ff564d;"></span></label>
 
                         <div class="form-group">
                             <select class="form-control myStyle" id="sel1" name="bloodGroup">
@@ -108,13 +108,13 @@ include 'navbarNew2.php';
 
                 </div>
 
-                <label for="" style="color:#bfbdb3">Father's name: <span style="color: #ff564d;">*</span></label>
+                <label for=""  style="color:black">Father's name: <span style="color: #ff564d;">*</span></label>
                 <div class="form-group">
                     <input type="text" name="fatherName" id="display_name" class="form-control"
                            placeholder="father's name" tabindex="3" required>
                 </div>
 
-                <label for="" style="color:#bfbdb3">Mather's name: <span style="color: #ff564d;">*</span></label>
+                <label for=""  style="color:black">Mather's name: <span style="color: #ff564d;">*</span></label>
                 <div class="form-group">
                     <input type="text" name="motherName" id="display_name" class="form-control"
                            placeholder="mother's name" tabindex="3" required>
@@ -122,7 +122,7 @@ include 'navbarNew2.php';
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-4 col-md-4">
-                        <label for="" style="color:#bfbdb3">Year of graduation: <span style="color: #ff564d;">*</span></label>
+                        <label for=""  style="color:black">Year of graduation: <span style="color: #ff564d;">*</span></label>
 
                         <input type="number" id="yog" class="form-control" name="yearOfGraduation"
                                min="1900" max="2099" step="1" value="2017"/>
@@ -133,7 +133,7 @@ include 'navbarNew2.php';
 
 
                     <div class="col-xs-12 col-sm-4 col-md-4">
-                        <label for="" style="color:#bfbdb3">Degree: <span style="color: #ff564d;">*</span></label>
+                        <label for=""  style="color:black">Degree: <span style="color: #ff564d;">*</span></label>
 
                         <div class="form-group">
                             <select class="form-control myStyle" id="sel1" name="degree">
@@ -148,7 +148,7 @@ include 'navbarNew2.php';
 
 
                     <div class="col-xs-12 col-sm-4 col-md-4">
-                        <label for="" style="color:#bfbdb3">Department: <span style="color: #ff564d;">*</span></label>
+                        <label for=""  style="color:black">Department: <span style="color: #ff564d;">*</span></label>
 
                         <div class="form-group">
                             <select class="form-control myStyle" id="sel1" name="degree">
@@ -181,7 +181,7 @@ include 'navbarNew2.php';
 
                 </div>
 
-                <label for="" style="color:#bfbdb3">Address: <span
+                <label for="" style="color:black">Address: <span
                         style="color: #ff564d;">*</span></label>
 
 
@@ -235,7 +235,7 @@ include 'navbarNew2.php';
                 </div>
 
 
-                <label for="" style="color:#bfbdb3">Mobile: <span
+                <label for=""  style="color:black">Mobile: <span
                         style="color: #ff564d;">*</span></label>
 
                 <div class="form-group">
@@ -243,14 +243,14 @@ include 'navbarNew2.php';
                            tabindex="1" required placeholder="mobile no(01*********)">
                 </div>
 
-                <label for="" style="color:#bfbdb3">Professional Information: Briefly state specialty/expertise area and experience(optional): <span
+                <label for=""  style="color:black">Professional Information: Briefly state specialty/expertise area and experience(optional): <span
                         style="color: #ff564d;"></span></label>
 
                 <div class="form-group">
                     <textarea name="personalExperties" class="form-control" rows="5"></textarea>
                 </div>
 
-                <label for="" style="color:#bfbdb3">Membership fee: <span
+                <label for=""  style="color:black">Membership fee: <span
                         style="color: #ff564d;"></span></label>
 
                 <div class="form-group">

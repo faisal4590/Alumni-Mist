@@ -65,7 +65,7 @@ include 'navbarNew2.php';
 $db = new mysqli('localhost', 'root', '', 'alumni') or die("Can't Connect to database");
 
 
-$query = 'SELECT * FROM alumni.chat_history ORDER BY chat_id ASC ' ;
+$query = 'SELECT * FROM alumni.chat_history ORDER BY chat_id DESC ' ;
 
 
 $res = $db->query($query) or die("Can't Connect to Query...");

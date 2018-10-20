@@ -98,6 +98,7 @@ include 'includes/sidebarmenu.php';
                     <div class="form-group">
                         <div>
                             <input type="file" name="upcomingEventImage">
+                            <span class="alert-danger">*Max size 1MB</span>
                         </div>
                     </div>
 

@@ -31,7 +31,7 @@ include 'navbarAdmin.php';
 
 <div class="container">
     <div class="row">
-        <form method="post" action="processAddAlumniCoverImage.php" enctype="multipart/form-data">
+        <form method="post" action="adminNew/processAddAlumniCoverImage.php" enctype="multipart/form-data">
             <div class="h1 alert-info text-center">
                 Add alumni department
             </div>
@@ -61,6 +61,7 @@ include 'navbarAdmin.php';
                     <div class="form-group">
                         <div>
                             <input type="file" required class="filestyle" name="alumniCoverPic">
+                            <span class="alert-danger">*Max size 1MB</span>
                         </div>
                     </div>
 

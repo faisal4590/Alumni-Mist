@@ -78,7 +78,7 @@ include 'navbarNew2.php';
             <button class="btn btn-default filter-button" data-filter="all"><span>All</span></button>
             <?php
             $db = new mysqli("localhost", "root", "", "alumni") or die("Can't Connect to database");
-            $query = 'SELECT * FROM alumni.alumnicoverlist';
+            $query = 'SELECT DISTINCT * FROM alumni.alumnicoverlist';
 
             $res = $db->query($query) or die('wrong query');
 
@@ -91,6 +91,7 @@ include 'navbarNew2.php';
                 if ($row['alumni_cover_dept'] == "CSE")
                 {
                     echo ' <button class="btn '.$departmentButton[0].' filter-button" data-filter="cse"><span>'.$row['alumni_cover_dept'].'</span></button>';
+
                 }
                 else if ($row['alumni_cover_dept'] == "EECE")
                 {
@@ -146,7 +147,7 @@ include 'navbarNew2.php';
                    
                     <div class="caption">
                         <a href="showAllAlumni.php?department='.$row['alumni_cover_dept'].'&batchno='.$row['batch_no'].'">
-                        <button class="btn '.$departmentButton[0].'  waves-effect myStyle"><span>'.$row['alumni_cover_dept'].'\''.$row['batch_no'].'  
+                        <button class="btn '.$departmentButton[0].'  waves-effect "><span>'.$row['alumni_cover_dept'].'\''.$row['batch_no'].'  
                         </span></button>
                         </a>
                     </div>
@@ -165,7 +166,7 @@ include 'navbarNew2.php';
                      </a>
                     <div class="caption">
                         <a href="showAllAlumni.php?department='.$row['alumni_cover_dept'].'&batchno='.$row['batch_no'].'">
-                        <button class="btn '.$departmentButton[0].'  waves-effect myStyle"><span>'.$row['alumni_cover_dept'].'\''.$row['batch_no'].' </span>
+                        <button class="btn '.$departmentButton[0].'  waves-effect"><span>'.$row['alumni_cover_dept'].'\''.$row['batch_no'].' </span>
                         </button>
                          </a>
                     </div>
@@ -185,7 +186,7 @@ include 'navbarNew2.php';
                      </a>
                     <div class="caption">
                     <a href="showAllAlumni.php?department='.$row['alumni_cover_dept'].'&batchno='.$row['batch_no'].'">
-                        <button class="btn '.$departmentButton[0].'  waves-effect myStyle"><span>'.$row['alumni_cover_dept'].'\''.$row['batch_no'].' </span></button>
+                        <button class="btn '.$departmentButton[0].'  waves-effect"><span>'.$row['alumni_cover_dept'].'\''.$row['batch_no'].' </span></button>
                         
 </a>
                     </div>
@@ -206,7 +207,7 @@ include 'navbarNew2.php';
                      
                     <div class="caption">
                     <a href="showAllAlumni.php?department='.$row['alumni_cover_dept'].'&batchno='.$row['batch_no'].'">
-                                            <button class="btn '.$departmentButton[0].'  waves-effect myStyle"><span>'.$row['alumni_cover_dept'].'\''.$row['batch_no'].' </span></button>
+                                            <button class="btn '.$departmentButton[0].'  waves-effect"><span>'.$row['alumni_cover_dept'].'\''.$row['batch_no'].' </span></button>
 
 </a>
                     </div>

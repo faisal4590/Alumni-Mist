@@ -1,6 +1,6 @@
 <div class="header-main">
 					<div class="logo-w3-agile">
-								<h1><a href="dashboard.php">MIST ALUMNI ASSOCIATION</a></h1>
+								<h1><a href="index.php">MIST ALUMNI ASSOCIATION</a></h1>
 							</div>
 				
 						
@@ -9,7 +9,7 @@
 									<li class="dropdown profile_details_drop">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 											<div class="profile_img">	
-												<span class="prfil-img"><img src="images/User-icon.png" alt=""> </span> 
+												<span class="prfil-img"><img src="../../images/chatAvatar.png" alt=""> </span>
 												<div class="user-name">
 													<p>Welcome</p>
 													<span>Administrator</span>
@@ -20,8 +20,8 @@
 											</div>	
 										</a>
 										<ul class="dropdown-menu drp-mnu">
-											<li> <a href="change-password.php"><i class="fa fa-user"></i> Profile</a> </li> 
-											<li> <a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a> </li>
+											<!--<li> <a href="change-password.php"><i class="fa fa-user"></i> Profile</a> </li> -->
+											<li> <a href="../../logout.php"><i class="fa fa-sign-out"></i> Logout</a> </li>
 										</ul>
 									</li>
 								</ul>

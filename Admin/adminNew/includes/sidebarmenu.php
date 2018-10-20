@@ -11,8 +11,9 @@ session_start();
 						<div style="border-top:1px ridge rgba(255, 255, 255, 0.15)"></div>
                            <div class="menu">
 									<ul id="menu" >
-										<li><a href="../index.php"><i class="fa fa-tachometer"></i> <span>Dashboard</span><div class="clearfix"></div></a></li>
-										
+										<li><a href="index.php"><i class="fa fa-tachometer"></i> <span>Dashboard</span><div class="clearfix"></div></a></li>
+
+									<!--Events-->
 									 <li id="menu-academico" ><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i><span> Events</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
 										   <ul id="menu-academico-sub" >
 										   <li id="menu-academico-avaliacoes" ><a href="../adminNew/createEvents.php">Create</a></li>
@@ -21,6 +22,16 @@ session_start();
 										  </ul>
 									 </li>
 
+										<!--Manage contents-->
+										<li id="menu-academico" ><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i><span> Manage contents</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
+											<ul id="menu-academico-sub" >
+												<li id="menu-academico-avaliacoes" ><a href="updateLogo.php">Update Logo</a></li>
+
+											</ul>
+										</li>
+
+
+										<!--Manage user-->
 										<?php
 										$db = new mysqli('localhost', 'root', '', 'alumni') or die("Can't Connect to database");
 
@@ -31,12 +42,13 @@ session_start();
 										$row_cnt = $res->num_rows;
 										?>
 
+
 										<li><a href="manageUser.php"><i class="fa fa-user" aria-hidden="true"></i>
 												<span>Manage User <span class="badge badge-light"> <?php echo $row_cnt; ?> </span></span><div class="clearfix"></div>
 											</a>
 										</li>
 
-
+										<!--Ticket notification-->
 										<?php
 										$db = new mysqli('localhost', 'root', '', 'alumni') or die("Can't Connect to database");
 
@@ -53,29 +65,32 @@ session_start();
 										</li>
 
 
-
+										<!--Department wise alumni-->
 
 										<li id="menu-academico" ><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i><span>Department-wise Alumni</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
 											<ul id="menu-academico-sub" >
-												<li id="menu-academico-avaliacoes" ><a href="../adminNew/createEvents.php">Add</a></li>
-												<li id="menu-academico-avaliacoes" ><a href="updateEvents.php">Update</a></li>
-												<li id="menu-academico-avaliacoes" ><a href="deleteEvents.php">Delete</a></li>
+												<li id="menu-academico-avaliacoes" ><a href="addDepartment.php">Add</a></li>
+												<li id="menu-academico-avaliacoes" ><a href="updateDepartment.php">Update</a></li>
+												<li id="menu-academico-avaliacoes" ><a href="deleteDepartment.php">Delete</a></li>
 											</ul>
 										</li>
 
+										<!--Expired alumni-->
 										<li id="menu-academico" ><a href="#"><i class="fa fa-deaf" aria-hidden="true"></i><span> Expired Alumni</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
 											<ul id="menu-academico-sub" >
-												<li id="menu-academico-avaliacoes" ><a href="../adminNew/createEvents.php">Create</a></li>
-												<li id="menu-academico-avaliacoes" ><a href="updateEvents.php">Update</a></li>
-												<li id="menu-academico-avaliacoes" ><a href="deleteEvents.php">Delete</a></li>
+												<li id="menu-academico-avaliacoes" ><a href="addDepartment.php">Create</a></li>
+												<li id="menu-academico-avaliacoes" ><a href="updateDepartment.php">Update</a></li>
+												<li id="menu-academico-avaliacoes" ><a href="deleteDepartment.php">Delete</a></li>
 											</ul>
 										</li>
 
+										<!--Manage committee-->
 										<li><a href="manageCommittee.php"><i class="fa fa-automobile" aria-hidden="true"></i>
 												<span>Manage Committee</span><div class="clearfix"></div>
 											</a>
 										</li>
 
+										<!--Login/logout-->
 										<?php
 										if (!isset($_SESSION['status']))
 										{

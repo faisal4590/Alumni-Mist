@@ -12,6 +12,7 @@
     overflow: hidden;
     position: relative;
     transition: all 0.3s ease-in-out 0s;
+    height:400px;
 }
 
 .our-team .pic:before{
@@ -33,7 +34,7 @@
 
 .our-team .pic img{
     width: 100%;
-    height: auto;
+    height: 300px;
 }
 
 .our-team .social{

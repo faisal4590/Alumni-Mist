@@ -110,7 +110,7 @@ include 'navbarNew2.php';
                         repudiandae, nobis quod ipsum deserunt sed.</p>
 
                 </div>
-                <div class="thumbnail scrollAnimWholeContent1"><img src="images/mine.jpg"
+                <div class="thumbnail scrollAnimWholeContent1"><img src="images/anis.jpg"
                                                                     alt="Thumbnail Image 1" style="height: 250px; "><br>
 
                 </div>
@@ -125,7 +125,7 @@ include 'navbarNew2.php';
                         repudiandae, nobis quod ipsum deserunt sed.</p>
 
                 </div>
-                <div class="thumbnail scrollAnimWholeContent1"><img src="images/nitu3.jpeg"
+                <div class="thumbnail scrollAnimWholeContent1"><img src="images/rubiyat.jpg"
                                                                     alt="Thumbnail Image 1" style="height: 250px; "><br>
 
                 </div>

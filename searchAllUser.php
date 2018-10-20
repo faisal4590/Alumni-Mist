@@ -6,6 +6,9 @@
  * Time: 5:09 PM
  */
 session_start();
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 ?>
 
 
@@ -90,7 +93,7 @@ session_start();
             {
                 $search = mysqli_real_escape_string($connect, $_POST["query"]);
                 $query = "
-                      SELECT * FROM users 
+                      SELECT * FROM alumni.users 
                       WHERE u_unm LIKE '%".$search."%' 
                       OR u_email LIKE '%".$search."%' 
                       ORDER BY u_id DESC
@@ -103,7 +106,7 @@ session_start();
 
 
             $result = mysqli_query($connect, $query);
-
+            var_dump($result);
             while($row = mysqli_fetch_array($result))
             {
                 shuffle($animation);

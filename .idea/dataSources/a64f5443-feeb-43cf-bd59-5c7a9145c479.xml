@@ -24,559 +24,581 @@
     <table id="19" parent="1" name="users"/>
     <table id="20" parent="1" name="validate_ticket"/>
     <table id="21" parent="1" name="committee"/>
-    <column id="22" parent="9" name="alumni_cover_id">
+    <table id="22" parent="1" name="managecontents"/>
+    <column id="23" parent="9" name="alumni_cover_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="23" parent="9" name="alumni_cover_dept">
+    <column id="24" parent="9" name="alumni_cover_dept">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="24" parent="9" name="batch_no">
+    <column id="25" parent="9" name="batch_no">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="25" parent="9" name="alumni_cover_img">
+    <column id="26" parent="9" name="alumni_cover_img">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <key id="26" parent="9" name="PRIMARY">
+    <key id="27" parent="9" name="PRIMARY">
       <columns>alumni_cover_id</columns>
       <primary>1</primary>
     </key>
-    <column id="27" parent="10" name="chat_id">
+    <column id="28" parent="10" name="chat_id">
       <mandatory>1</mandatory>
       <data-type>int(13)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="28" parent="10" name="chat_username">
+    <column id="29" parent="10" name="chat_username">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="29" parent="10" name="chat_body">
+    <column id="30" parent="10" name="chat_body">
       <mandatory>1</mandatory>
       <data-type>text|0</data-type>
     </column>
-    <column id="30" parent="10" name="chat_image">
+    <column id="31" parent="10" name="chat_image">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="31" parent="10" name="chat_time">
+    <column id="32" parent="10" name="chat_time">
       <mandatory>1</mandatory>
       <data-type>datetime|0</data-type>
     </column>
-    <key id="32" parent="10" name="PRIMARY">
+    <key id="33" parent="10" name="PRIMARY">
       <columns>chat_id</columns>
       <primary>1</primary>
     </key>
-    <column id="33" parent="11" name="donor_id">
+    <column id="34" parent="11" name="donor_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="34" parent="11" name="donor_name">
+    <column id="35" parent="11" name="donor_name">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="35" parent="11" name="tax_no">
+    <column id="36" parent="11" name="tax_no">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="36" parent="11" name="paid_amount">
+    <column id="37" parent="11" name="paid_amount">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="37" parent="11" name="currency">
+    <column id="38" parent="11" name="currency">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="38" parent="11" name="status">
+    <column id="39" parent="11" name="status">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="39" parent="12" name="id">
+    <column id="40" parent="12" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="40" parent="12" name="user_id">
+    <column id="41" parent="12" name="user_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="41" parent="12" name="event_id">
+    <column id="42" parent="12" name="event_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="42" parent="12" name="event_name">
+    <column id="43" parent="12" name="event_name">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="43" parent="12" name="going">
+    <column id="44" parent="12" name="going">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <key id="44" parent="12" name="PRIMARY">
+    <key id="45" parent="12" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <column id="45" parent="13" name="expired_alumni_id">
+    <column id="46" parent="13" name="expired_alumni_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="46" parent="13" name="expired_alumni_name">
+    <column id="47" parent="13" name="expired_alumni_name">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="47" parent="13" name="expired_alumni_bday">
+    <column id="48" parent="13" name="expired_alumni_bday">
       <mandatory>1</mandatory>
       <data-type>date|0</data-type>
     </column>
-    <column id="48" parent="13" name="expired_alumni_death">
+    <column id="49" parent="13" name="expired_alumni_death">
       <mandatory>1</mandatory>
       <data-type>date|0</data-type>
     </column>
-    <column id="49" parent="13" name="expired_alumni_dept">
+    <column id="50" parent="13" name="expired_alumni_dept">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="50" parent="13" name="expired_alumni_achv">
+    <column id="51" parent="13" name="expired_alumni_achv">
       <mandatory>1</mandatory>
       <data-type>text|0</data-type>
     </column>
-    <column id="51" parent="13" name="expired_alumni_pic">
+    <column id="52" parent="13" name="expired_alumni_pic">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <key id="52" parent="13" name="PRIMARY">
+    <key id="53" parent="13" name="PRIMARY">
       <columns>expired_alumni_id</columns>
       <primary>1</primary>
     </key>
-    <column id="53" parent="14" name="id">
+    <column id="54" parent="14" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="54" parent="14" name="username">
+    <column id="55" parent="14" name="username">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="55" parent="14" name="fullname">
+    <column id="56" parent="14" name="fullname">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="56" parent="14" name="email">
+    <column id="57" parent="14" name="email">
       <mandatory>1</mandatory>
       <data-type>text|0</data-type>
     </column>
-    <column id="57" parent="14" name="password">
+    <column id="58" parent="14" name="password">
       <mandatory>1</mandatory>
       <data-type>text|0</data-type>
     </column>
-    <column id="58" parent="14" name="image">
+    <column id="59" parent="14" name="image">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="59" parent="14" name="message">
+    <column id="60" parent="14" name="message">
       <mandatory>1</mandatory>
       <data-type>text|0</data-type>
     </column>
-    <column id="60" parent="14" name="date">
+    <column id="61" parent="14" name="date">
       <mandatory>1</mandatory>
       <data-type>datetime|0</data-type>
     </column>
-    <column id="61" parent="14" name="department">
+    <column id="62" parent="14" name="department">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="62" parent="14" name="batch_no">
+    <column id="63" parent="14" name="batch_no">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="63" parent="14" name="roll">
+    <column id="64" parent="14" name="roll">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="64" parent="14" name="registration_no">
+    <column id="65" parent="14" name="registration_no">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <key id="65" parent="14" name="PRIMARY">
+    <key id="66" parent="14" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <column id="66" parent="15" name="post_id">
+    <column id="67" parent="15" name="post_id">
       <mandatory>1</mandatory>
       <data-type>int(14)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="67" parent="15" name="post_username">
+    <column id="68" parent="15" name="post_username">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="68" parent="15" name="user_image">
+    <column id="69" parent="15" name="user_image">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="69" parent="15" name="post_title">
+    <column id="70" parent="15" name="post_title">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="70" parent="15" name="post_details">
+    <column id="71" parent="15" name="post_details">
       <mandatory>1</mandatory>
       <data-type>text|0</data-type>
     </column>
-    <column id="71" parent="15" name="post_image">
+    <column id="72" parent="15" name="post_image">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="72" parent="15" name="post_time">
+    <column id="73" parent="15" name="post_time">
       <mandatory>1</mandatory>
       <data-type>date|0</data-type>
     </column>
-    <key id="73" parent="15" name="PRIMARY">
+    <key id="74" parent="15" name="PRIMARY">
       <columns>post_id</columns>
       <primary>1</primary>
     </key>
-    <column id="74" parent="16" name="upcoming_event_id">
+    <column id="75" parent="16" name="upcoming_event_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="75" parent="16" name="upcoming_event_title">
+    <column id="76" parent="16" name="upcoming_event_title">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="76" parent="16" name="upcoming_event_location">
+    <column id="77" parent="16" name="upcoming_event_location">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="77" parent="16" name="upcoming_event_time">
+    <column id="78" parent="16" name="upcoming_event_time">
       <mandatory>1</mandatory>
       <data-type>datetime|0</data-type>
     </column>
-    <column id="78" parent="16" name="upcoming_event_duration">
+    <column id="79" parent="16" name="upcoming_event_duration">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="79" parent="16" name="upcoming_event_description">
+    <column id="80" parent="16" name="upcoming_event_description">
       <mandatory>1</mandatory>
       <data-type>text|0</data-type>
     </column>
-    <column id="80" parent="16" name="upcoming_event_image">
+    <column id="81" parent="16" name="upcoming_event_image">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="81" parent="16" name="ticket_request_status">
+    <column id="82" parent="16" name="ticket_request_status">
       <mandatory>1</mandatory>
       <data-type>int(1)|0</data-type>
     </column>
-    <key id="82" parent="16" name="PRIMARY">
+    <key id="83" parent="16" name="PRIMARY">
       <columns>upcoming_event_id</columns>
       <primary>1</primary>
     </key>
-    <column id="83" parent="17" name="id">
+    <column id="84" parent="17" name="id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="84" parent="17" name="user_id">
+    <column id="85" parent="17" name="user_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="85" parent="17" name="message">
+    <column id="86" parent="17" name="message">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <key id="86" parent="17" name="PRIMARY">
+    <key id="87" parent="17" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <column id="87" parent="18" name="notification_id">
+    <column id="88" parent="18" name="notification_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="88" parent="18" name="user_id">
+    <column id="89" parent="18" name="user_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="89" parent="18" name="email">
+    <column id="90" parent="18" name="email">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="90" parent="18" name="ticket_id">
+    <column id="91" parent="18" name="ticket_id">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="91" parent="18" name="event_title">
+    <column id="92" parent="18" name="event_title">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="92" parent="18" name="noti_message">
+    <column id="93" parent="18" name="noti_message">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <key id="93" parent="18" name="PRIMARY">
+    <key id="94" parent="18" name="PRIMARY">
       <columns>notification_id</columns>
       <primary>1</primary>
     </key>
-    <column id="94" parent="19" name="u_id">
+    <column id="95" parent="19" name="u_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="95" parent="19" name="u_fnm">
+    <column id="96" parent="19" name="u_fnm">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="96" parent="19" name="u_unm">
+    <column id="97" parent="19" name="u_unm">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="97" parent="19" name="u_pwd">
+    <column id="98" parent="19" name="u_pwd">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="98" parent="19" name="u_email">
+    <column id="99" parent="19" name="u_email">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="99" parent="19" name="mobile_no">
+    <column id="100" parent="19" name="mobile_no">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="100" parent="19" name="designation">
+    <column id="101" parent="19" name="designation">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="101" parent="19" name="city">
+    <column id="102" parent="19" name="city">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="102" parent="19" name="current_working_place">
+    <column id="103" parent="19" name="current_working_place">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="103" parent="19" name="address">
+    <column id="104" parent="19" name="address">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="104" parent="19" name="roll">
+    <column id="105" parent="19" name="roll">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="105" parent="19" name="registration_no">
+    <column id="106" parent="19" name="registration_no">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="106" parent="19" name="department">
+    <column id="107" parent="19" name="department">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="107" parent="19" name="batch_no">
+    <column id="108" parent="19" name="batch_no">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="108" parent="19" name="student_status">
+    <column id="109" parent="19" name="student_status">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="109" parent="19" name="research_link">
+    <column id="110" parent="19" name="research_link">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="110" parent="19" name="higher_uni">
+    <column id="111" parent="19" name="higher_uni">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="111" parent="19" name="higher_cntry">
+    <column id="112" parent="19" name="higher_cntry">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="112" parent="19" name="higher_dept">
+    <column id="113" parent="19" name="higher_dept">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="113" parent="19" name="higher_research_area">
+    <column id="114" parent="19" name="higher_research_area">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="114" parent="19" name="higher_admsn">
+    <column id="115" parent="19" name="higher_admsn">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="115" parent="19" name="higher_fund_status">
+    <column id="116" parent="19" name="higher_fund_status">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="116" parent="19" name="higher_CGPA">
+    <column id="117" parent="19" name="higher_CGPA">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="117" parent="19" name="higher_ielts">
+    <column id="118" parent="19" name="higher_ielts">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="118" parent="19" name="higher_gre">
+    <column id="119" parent="19" name="higher_gre">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="119" parent="19" name="higher_publications">
+    <column id="120" parent="19" name="higher_publications">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="120" parent="19" name="higher_job_experience">
+    <column id="121" parent="19" name="higher_job_experience">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="121" parent="19" name="higher_apply">
+    <column id="122" parent="19" name="higher_apply">
       <mandatory>1</mandatory>
       <data-type>text|0</data-type>
     </column>
-    <column id="122" parent="19" name="higher_fund">
+    <column id="123" parent="19" name="higher_fund">
       <mandatory>1</mandatory>
       <data-type>text|0</data-type>
     </column>
-    <column id="123" parent="19" name="u_img">
+    <column id="124" parent="19" name="u_img">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="124" parent="19" name="forgot_pass_identity">
+    <column id="125" parent="19" name="forgot_pass_identity">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="125" parent="19" name="created">
+    <column id="126" parent="19" name="created">
       <mandatory>1</mandatory>
       <data-type>datetime|0</data-type>
     </column>
-    <column id="126" parent="19" name="modified">
+    <column id="127" parent="19" name="modified">
       <mandatory>1</mandatory>
       <data-type>datetime|0</data-type>
     </column>
-    <column id="127" parent="19" name="status">
+    <column id="128" parent="19" name="status">
       <mandatory>1</mandatory>
       <data-type>int(1)|0</data-type>
       <default-expression>&apos;1&apos;</default-expression>
     </column>
-    <column id="128" parent="19" name="facebook">
+    <column id="129" parent="19" name="facebook">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="129" parent="19" name="twitter">
+    <column id="130" parent="19" name="twitter">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="130" parent="19" name="googleplus">
+    <column id="131" parent="19" name="googleplus">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="131" parent="19" name="linkedin">
+    <column id="132" parent="19" name="linkedin">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <key id="132" parent="19" name="PRIMARY">
+    <key id="133" parent="19" name="PRIMARY">
       <columns>u_id</columns>
       <primary>1</primary>
     </key>
-    <column id="133" parent="20" name="ticket_id">
+    <column id="134" parent="20" name="ticket_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="134" parent="20" name="user_id">
+    <column id="135" parent="20" name="user_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="135" parent="20" name="upcoming_event_id">
+    <column id="136" parent="20" name="upcoming_event_id">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="136" parent="20" name="upcoming_event_title">
+    <column id="137" parent="20" name="upcoming_event_title">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="137" parent="20" name="upcoming_event_duration">
+    <column id="138" parent="20" name="upcoming_event_duration">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="138" parent="20" name="upcoming_event_time">
+    <column id="139" parent="20" name="upcoming_event_time">
       <mandatory>1</mandatory>
       <data-type>datetime|0</data-type>
     </column>
-    <column id="139" parent="20" name="upcoming_event_image">
+    <column id="140" parent="20" name="upcoming_event_image">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="140" parent="20" name="upcoming_event_location">
+    <column id="141" parent="20" name="upcoming_event_location">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="141" parent="20" name="upcoming_event_details">
+    <column id="142" parent="20" name="upcoming_event_details">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="142" parent="20" name="username">
+    <column id="143" parent="20" name="username">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="143" parent="20" name="fullname">
+    <column id="144" parent="20" name="fullname">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="144" parent="20" name="email">
+    <column id="145" parent="20" name="email">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="145" parent="20" name="image">
+    <column id="146" parent="20" name="image">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="146" parent="20" name="message">
+    <column id="147" parent="20" name="message">
       <mandatory>1</mandatory>
       <data-type>text|0</data-type>
     </column>
-    <column id="147" parent="20" name="reqstTicketDate">
+    <column id="148" parent="20" name="reqstTicketDate">
       <mandatory>1</mandatory>
       <data-type>datetime|0</data-type>
     </column>
-    <key id="148" parent="20" name="PRIMARY">
+    <key id="149" parent="20" name="PRIMARY">
       <columns>ticket_id</columns>
       <primary>1</primary>
     </key>
-    <column id="149" parent="21" name="id">
+    <column id="150" parent="21" name="id">
       <mandatory>1</mandatory>
       <data-type>int(13)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="150" parent="21" name="committee_designation">
+    <column id="151" parent="21" name="committee_designation">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="151" parent="21" name="committee_name">
+    <column id="152" parent="21" name="committee_name">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="152" parent="21" name="committee_email">
+    <column id="153" parent="21" name="committee_email">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="153" parent="21" name="committee_mobile">
+    <column id="154" parent="21" name="committee_mobile">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="154" parent="21" name="committee_address">
+    <column id="155" parent="21" name="committee_address">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="155" parent="21" name="committee_current_working_place">
+    <column id="156" parent="21" name="committee_current_working_place">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <column id="156" parent="21" name="committee_image">
+    <column id="157" parent="21" name="committee_image">
       <mandatory>1</mandatory>
       <data-type>varchar(255)|0</data-type>
     </column>
-    <key id="157" parent="21" name="PRIMARY">
+    <key id="158" parent="21" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="159" parent="22" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="160" parent="22" name="logo_title">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="161" parent="22" name="logo_image">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="162" parent="22" name="background">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="163" parent="22" name="PRIMARY">
       <columns>id</columns>
       <primary>1</primary>
     </key>

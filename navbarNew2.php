@@ -27,7 +27,7 @@
         <!--
          navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange
          -->
-        <nav class="navbar navbar-ct-green navbar-fixed-top navbar-transparent" role="navigation">
+        <nav class="navbar navbar-ct-green navbar-fixed-top " role="navigation">
 
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -41,9 +41,15 @@
                     </button>
                     <a class="navbar-brand navbar-brand-logo scrollAnimLogo" href="index.php">
                         <div class="logo">
-                            <img src="images/alumniLogo.jpg" style="height: 50px;width: 60px">
+                            <?php
+                            $db = new mysqli("localhost", "root", "", "alumni") or die("Can't Connect to database");
+                            $query = "SELECT * from alumni.managecontents";
+                            $res = $db->query($query) or die("Can't Connect to Query...");
+                            $row = mysqli_fetch_array($res);
+                            ?>
+                            <img src="images/<?php echo $row['logo_image'];?>" style="height: 50px;width: 60px">
                         </div>
-                        <div class="brand" style="font-family: LobsterTwo-Regular; font-size: 18px;" > MIST ALUMNI ASSOCIATION</div>
+                        <div class="brand" style="font-family: LobsterTwo-Regular;" > <?php echo $row['logo_title'];?></div>
                     </a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -52,7 +58,7 @@
                         <li>
                             <a href="javascript:void(0);" data-toggle="search" class="hidden-xs">
                                 <i class="pe-7s-search"></i>
-                                    <p class="menuText" style="font-family: LobsterTwo-Regular; font-size: 18px;">Search</p>
+                                    <p class="menuText" style="font-family: LobsterTwo-Regular;">Search</p>
                             </a>
                         </li>
 
@@ -61,7 +67,7 @@
                             <a href="index.php">
                                 <i class="pe-7s-home">
                                 </i>
-                                <p class="menuText" style="font-family: LobsterTwo-Regular; font-size: 18px;">Home</p>
+                                <p class="menuText" style="font-family: LobsterTwo-Regular;">Home</p>
                             </a>
                         </li>
 
@@ -69,7 +75,7 @@
                         <?php
                         if (!isset($_SESSION['status']))
                         {
-                            echo ' <li><a href="login.php">  <i class="pe-7s-add-user"></i><p style="font-family: LobsterTwo-Regular; font-size: 18px;">Login</p></a></li>';
+                            echo ' <li><a href="login.php">  <i class="pe-7s-add-user"></i><p style="font-family: LobsterTwo-Regular">Login</p></a></li>';
                         }
                         else
                         {
@@ -77,19 +83,19 @@
                             {
                                 echo '<li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
-                    role="button" aria-haspopup="true" aria-expanded="false"><p style="font-family: LobsterTwo-Regular; font-size: 18px;">'. $_SESSION['unm'] . '</p>'.
+                    role="button" aria-haspopup="true" aria-expanded="false"><p style="font-family: LobsterTwo-Regular;">'. $_SESSION['unm'] . '</p>'.
                                     '<span class="caret"></span>
                                     <i class="pe-7s-add-user"></i>
                                     </a>
                 
                     <ul class="dropdown-menu">
-                        <li><a href="viewUserProfile.php" target="_blank" style="font-family: LobsterTwo-Regular; font-size: 18px;">View profile</a></li>
-                        <li><a href="newUpdate.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Update profile</a></li>
-                        <li><a href="timeline.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Timeline</a></li>
+                        <li><a href="viewUserProfile.php" target="_blank" style="font-family: LobsterTwo-Regular;">View profile</a></li>
+                        <li><a href="newUpdate.php" style="font-family: LobsterTwo-Regular;">Update profile</a></li>
+                        <li><a href="timeline.php" style="font-family: LobsterTwo-Regular;">Timeline</a></li>
                         
-                        <li><a href="open_chat.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Chat</a></li>
-                        <li><a href="viewAllUsers.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">View all users</a></li>
-                        <li><a href="logout.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Logout</a></li>
+                        <li><a href="open_chat.php" style="font-family: LobsterTwo-Regular;">Chat</a></li>
+                        <li><a href="viewAllUsers.php" style="font-family: LobsterTwo-Regular;">View all users</a></li>
+                        <li><a href="logout.php" style="font-family: LobsterTwo-Regular; ">Logout</a></li>
                       
                     </ul>
                     </li>';
@@ -98,21 +104,21 @@
                             {
                                 echo '<li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
-                    role="button" aria-haspopup="true" aria-expanded="false"><img src="images/mine.jpg" 
+                    role="button" aria-haspopup="true" aria-expanded="false"><img src="images/userImages/'.$_SESSION['uphoto'].'" 
                     class="img-circle" height="35" width="35" alt="">
-                    <p style="font-family: LobsterTwo-Regular; font-size: 18px;">' . $_SESSION['unm'] . '</p>'
+                    <p style="font-family: LobsterTwo-Regular;">' . $_SESSION['unm']. '</p>'
                                     . '<span class="caret"></span>
                                     
                                     </a>
                 
                     <ul class="dropdown-menu">
-                        <li><a href="viewUserProfile.php" target="_blank" style="font-family: LobsterTwo-Regular; font-size: 18px;">View profile</a></li>
-                        <li><a href="newUpdate.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Update profile</a></li>
-                        <li><a href="timeline.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Timeline</a></li>
+                        <li><a href="viewUserProfile.php" target="_blank" style="font-family: LobsterTwo-Regular;">View profile</a></li>
+                        <li><a href="newUpdate.php" style="font-family: LobsterTwo-Regular;">Update profile</a></li>
+                        <li><a href="timeline.php" style="font-family: LobsterTwo-Regular; ">Timeline</a></li>
                         
-                        <li><a href="open_chat.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Chat</a></li>
-                        <li><a href="viewAllUsers.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">View all users</a></li>
-                        <li><a href="logout.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Logout</a></li>
+                        <li><a href="open_chat.php" style="font-family: LobsterTwo-Regular;">Chat</a></li>
+                        <li><a href="viewAllUsers.php" style="font-family: LobsterTwo-Regular;">View all users</a></li>
+                        <li><a href="logout.php" style="font-family: LobsterTwo-Regular;">Logout</a></li>
                       
                     </ul>
                     </li>';
@@ -123,16 +129,16 @@
                         <!--About us-->
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="aboutus.php"><i class="pe-7s-users"></i><p style="font-family: LobsterTwo-Regular; font-size: 18px;">About us</p></a>
+                                <a href="aboutus.php"><i class="pe-7s-users"></i><p style="font-family: LobsterTwo-Regular;">About us</p></a>
                             </li>
                         </ul>
 
                         <!--Membership application-->
-                        <ul class="nav navbar-nav navbar-right">
+      <!--                  <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="membershipApplication.php"><i class="pe-7s-pen"></i><p style="font-family: LobsterTwo-Regular; font-size: 18px;">Membership</p></a>
+                                <a href="membershipApplication.php"><i class="pe-7s-pen"></i><p style="font-family: LobsterTwo-Regular;">Membership</p></a>
                             </li>
-                        </ul>
+                        </ul>-->
 
                         <!--Expired Alumni-->
                         <?php
@@ -141,7 +147,7 @@
                             echo '
                             <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="expiredAlumni.php"><i class="pe-7s-delete-user"></i><p style="font-family: LobsterTwo-Regular; font-size: 18px;">Expired Alumni</p></a>
+                                <a href="expiredAlumni.php"><i class="pe-7s-delete-user"></i><p style="font-family: LobsterTwo-Regular; ">Expired Alumni</p></a>
                             </li>
                             </ul>
                             ';
@@ -149,17 +155,17 @@
                         ?>
 
                         <!--Donate-->
-                        <!--<ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="donation.php"><i class="pe-7s-cash"></i><p style="font-family: LobsterTwo-Regular; font-size: 18px;">Donate</p> </a>
+                                <a href="donation.php"><i class="pe-7s-cash"></i><p style="font-family: LobsterTwo-Regular; ">Donate</p> </a>
                             </li>
-                        </ul>-->
+                        </ul>
 
                         <!--All alumni-->
 
                         <ul class="nav navbar-nav navbar-left">
                             <li>
-                                <a href="alumniList.php"><i class="pe-7s-albums"></i><p style="font-family: LobsterTwo-Regular; font-size: 18px;">All Alumni</p></a>
+                                <a href="alumniList.php"><i class="pe-7s-albums"></i><p style="font-family: LobsterTwo-Regular;">All Alumni</p></a>
                             </li>
                         </ul>
 
@@ -169,10 +175,10 @@
                         <ul class="nav navbar-nav navbar-left">
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-haspopup="true" aria-expanded="false"><i class="pe-7s-bell"></i><p style="font-family: LobsterTwo-Regular; font-size: 18px;">Events</p> <span class="caret"></span></a>
+                                   aria-haspopup="true" aria-expanded="false"><i class="pe-7s-bell"></i><p style="font-family: LobsterTwo-Regular;">Events</p> <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="upcomingEventsNew.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Upcoming events</a></li>
-                                    <li><a href="pastEvents.php" style="font-family: LobsterTwo-Regular; font-size: 18px;">Past events</a></li>
+                                    <li><a href="upcomingEventsNew.php" style="font-family: LobsterTwo-Regular; ">Upcoming events</a></li>
+                                    <li><a href="pastEvents.php" style="font-family: LobsterTwo-Regular;">Past events</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -199,7 +205,7 @@
                                            <i class="pe-7s-mail"> 
                                                 <span class="label">' . $row_cnt . '</span>
                                             </i>
-                                            <p style="font-family: LobsterTwo-Regular; font-size: 18px;">Message</p>
+                                            <p style="font-family: LobsterTwo-Regular;">Message</p>
                                            <span class="caret"></span></a>
                                         <ul class="dropdown-menu">
                                     
@@ -208,7 +214,7 @@
                                 while ($row = $res->fetch_array(MYSQLI_ASSOC))
                                 {
                                     echo '
-                                    <li><a href="https://www.gmail.com/" style="font-family: LobsterTwo-Regular; font-size: 18px;">' . $row['noti_message'] . '</a></li>';
+                                    <li><a href="https://www.gmail.com/" style="font-family: LobsterTwo-Regular;">' . $row['noti_message'] . '</a></li>';
                                 }
 
                                 echo '
@@ -232,11 +238,11 @@
                                                    <i class="pe-7s-mail"> 
                                                                                     <span class="label">' . $row_cnt . '</span>
                                                                                 </i>
-                                                                                <p style="font-family: LobsterTwo-Regular; font-size: 18px;">Message</p>
+                                                                                <p style="font-family: LobsterTwo-Regular;">Message</p>
                                                                                <span class="caret"></span></a>
                                                                        
                                                 <ul class="dropdown-menu">
-                                                <li style="padding: 5px;" style="font-family: LobsterTwo-Regular; font-size: 18px;">No new notification </li>
+                                                <li style="padding: 5px;" style="font-family: LobsterTwo-Regular;">No new notification </li>
                                                  </ul>
                                             </li>
                                         </ul>';
@@ -250,14 +256,14 @@
                         <!--MIST linkup-->
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="https://mist.ac.bd/"><i class="pe-7s-study"></i><p style="font-family: LobsterTwo-Regular; font-size: 18px;">MIST</p></a>
+                                <a href="https://mist.ac.bd/"><i class="pe-7s-study"></i><p style="font-family: LobsterTwo-Regular;">MIST</p></a>
                             </li>
                         </ul>
 
                         <!--Committee-->
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="committee.php"><i class="pe-7s-study"></i><p style="font-family: LobsterTwo-Regular; font-size: 18px;">Committee</p></a>
+                                <a href="committee.php"><i class="pe-7s-study"></i><p style="font-family: LobsterTwo-Regular;">Committee</p></a>
                             </li>
                         </ul>
 
@@ -297,9 +303,11 @@
                 $("#result").html($data);
             })
         }
+
     });
     $("#search").keydown(function () {
         $("#result").html("");
+
     });
 
 

@@ -165,9 +165,9 @@ $row = $res->fetch_array(MYSQLI_ASSOC);
                             <label for="">Update password</label>
                             <input class="myStyle form-control" type="password" name="updatePassword"
                                    value="<?php echo $_SESSION['upass']; ?>"/>
-                            <label for="">Confirm password</label>
+                           <!-- <label for="">Confirm password</label>
                             <input class="myStyle form-control" type="password" name="confirmUpdatePassword"
-                                   placeholder="Confirm Password"/>
+                                   placeholder="Confirm Password"/>-->
                             <label for="">Update profile picture</label>
                             <input type="file" class="filestyle" name="deleteImage">
                         </div>

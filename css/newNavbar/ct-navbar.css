@@ -134,10 +134,10 @@ h1 .subtitle{
     font-size: 20px;
 }
 .navbar-nav > li > a {
-    margin: 6px 3px;
+    /*margin: 6px 3px;*/
     padding: 6px 7px;
     text-align: center;
-    min-width: 70px;
+    /*min-width: 34px;*/
 }
 .navbar-nav > li > a [class^="fa"]{
     font-size: 18px;
@@ -178,7 +178,7 @@ h1 .subtitle{
     border-top-color: #FFFFFF;
 }
 .navbar-transparent .navbar-nav > li > a, [class*="navbar-ct"] .navbar-nav > li > a{
-    color: #1F9385;
+    color: black;
     border-color: #FFFFFF;
     text-align: center;
     font-family:LobsterTwo-Regular;
@@ -186,7 +186,7 @@ h1 .subtitle{
 
 .navbar-transparent:hover .navbar-nav > li > a:hover, [class*="navbar-ct"] .navbar-nav > li > a:hover
 {
-    color:#1F9385;
+    color: black;
 }
 .navbar-transparent .navbar-nav > li > a{
     /*text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);*/
@@ -341,7 +341,7 @@ h1 .subtitle{
     width: 60px;
 }
 .navbar .navbar-brand-logo .brand{
-    color: #1F9385;;
+    color: black;;
     float: left;
     font-size: 18px;
     font-weight: 400;

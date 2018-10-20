@@ -94,7 +94,7 @@ include 'navbarNew2.php';
                 "scrollAnimWholeContent3");
 
             $query = "SELECT * FROM alumni.users WHERE users.department = '$department' AND batch_no = '$batchNo' 
-            AND student_status ='previous student' ORDER BY alumni.users.roll ASC ";
+            ORDER BY alumni.users.roll ASC ";
 
 
             $result = mysqli_query($connect, $query) or die('cant connect to query');
